@@ -1,0 +1,23 @@
+
+.card-header {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px; }
+
+.card {
+  margin-bottom: 0; }
+
+.card-block {
+  padding: 0 1.25rem 2rem 1.25rem; }
+
+.card:hover {
+  box-shadow: -2px 0 46px -5px #9e9c9e !important; }
+
+.card_nav_hover > a:hover {
+  padding-bottom: 10px;
+  border-bottom: 4px solid red; }
+
+.card_nav_body_padding {
+  padding: 15px; }
+
+.card_block_top_align {
+  margin-top: 15px; }
