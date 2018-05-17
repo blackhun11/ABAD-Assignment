@@ -1,8 +1,8 @@
 
 
-    {{-- <script src="{{asset('js/jquery.min.js')}}"></script> --}}
     
     @foreach ( $recommendedProject as $recommendedProjects )
+<a style="text-decoration:none;" href="{{ url('projectDetail') }}/{{$recommendedProjects->projectID}}">
         <div style = "margin: 5px 0; padding:0;" name = 'projectID' value = '{{$recommendedProjects->projectID}}' >
             <div class="col-lg-4" style="padding:0;">
                 <div class="card m-t-35">
@@ -23,27 +23,27 @@
                         <div style="display:flex; color: #6c757d!important; justify-content:space-between;">
 
                             <div style="margin:0; padding:0; display:flex; ">
-                            <i class="ti-location-pin" style="margin-top:10px;"></i>
-                            <h5 id = "postalCode{{$recommendedProjects->RowNumber}}" class="postalCode" style="font-size:80%;" 
+                            <i class="ti-location-pin" style="margin-top:6px;"></i>
+                            <h5 id = "postalCode{{$recommendedProjects->RowNumber}}" class="postalCode" style="font-size:65%;" 
                                 value={{$recommendedProjects->postalCode}}>
                             </h5>
                             </div> 
                             <div style="margin:0; padding:0; display:flex;">
-                            <h5 style="font-size:80%;"> {{$recommendedProjects->propertyKindDesc}} 
+                            <h5 style="font-size:65%;"> {{$recommendedProjects->propertyKindDesc}} 
                                 <h5 style="margin-top: 13px; font-size: 7px;">&#9670;</h5> 
                             </h5>
-                            <h5 style="font-size:80%;"> {{$recommendedProjects->bidDateLeft}}
+                            <h5 style="font-size:65%;"> {{$recommendedProjects->bidDateLeft}}
                                 <h5 style="margin-top: 13px; font-size: 7px;">&#9670;</h5> 
                             </h5>
                        
-                            <h5 style="font-size:80%;"> {{$recommendedProjects->bids}} </h5>
+                            <h5 style="font-size:65%;"> {{$recommendedProjects->bids}} </h5>
                             </div> 
                         </div>
                     </div>   
                 </div>
             </div>
         </div>
-
+    </a>
 <script>
 
 (

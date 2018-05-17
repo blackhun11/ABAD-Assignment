@@ -12,7 +12,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default pull-right" data-dismiss="modal" style="margin-left:5px;">No</button>
-          <button type="button" class="btn btn-primary" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Yes</button>                    
+          <button type="button" class="btn btn-primary" href="/home" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Yes</button>                    
         </div>
       </div>
       <!-- /.modal-content -->
@@ -29,22 +29,30 @@
             display: flex;
             justify-content: space-evenly;
             margin:0;">
+
             <div class="col-4 text-center bg-mint" style="padding:0; margin :0; padding:0; width:100%">
-              <a href="/">
-                <i class="ion-home" style="border: none; width: 100%; border-radius:0%; margin:0; padding:0;"></i>
-              </a>
+                <a href="{{ url('home') }}">
+                  <i class="ion-home" style="border: none; width: 100%; border-radius:0%; margin:0; padding:0;"></i>
+                </a>
             </div>
+
             <div class="col-4 text-center bg-mint" style="padding:0; margin :0; padding:0; width:100%">
-              <a href="/projectList">  
+              <a href="{{ url('projectList') }}">  
                 <i class="fa fa-search" style="border: none; width: 100%; border-radius:0%; margin:0; padding:0;"></i>
               </a>
             </div>
-            <div class="col-4 text-center bg-mint" style="padding:0; margin :0; padding:0; width:100%">
-                <i class="fa fa-tasks" style="border: none; width: 100%; border-radius:0%; margin:0; padding:0;"></i>
+            <div class="col-4 text-center bg-mint" style="padding:0; margin :0; padding:0; width:100%">           
+                @guest
+                    <a class="nav-link" href="{{ route('login') }}">
+                        <i class="fa fa-tasks" style="border: none; width: 100%; border-radius:0%; margin:0; padding:0;"></i> 
+                    </a>     
+                @else
+                  <a href="{{ url('myProject') }}">
+                    <i class="fa fa-tasks" style="border: none; width: 100%; border-radius:0%; margin:0; padding:0;"></i>
+                </a>
+                @endguest
             </div>
-            <div class="col-4 text-center bg-mint" style="padding:0; margin :0; padding:0; width:100%">
-                <i class="fa fa-gavel" style="border: none; width: 100%; border-radius:0%; margin:0; padding:0;"></i>
-            </div>
+             
             <div class="col-4 text-center bg-mint" style="padding:0; margin :0; padding:0; width:100%">
                 @guest
                     <a class="nav-link" href="{{ route('login') }}">
@@ -62,3 +70,5 @@
         </div>
     </div>
     </footer>
+
+    

@@ -1,0 +1,13 @@
+.button-keren
+{
+    border-radius:5px !important;
+    border: 1px solid #fff !important;
+    color: #fff !important;
+    background: none !important;
+}
+
+.button-keren:hover
+{
+    background: #fff !important;
+    color: rgb(13, 197, 230) !important;
+}

@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
-use App\Project;
 
+use App\Project;
+use Auth;
+use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class Test extends Controller
 {
@@ -15,19 +16,12 @@ class Test extends Controller
         return view('mainLayout.test');
     }
 
-    public function store(request $request)
+    public function store(Request $request)
     {
+       $test = $request->test;
+       dd($request);
 
-        // if ($request->hasFile('image')) {
-        //     $request->file('image');
-        //     // return $request->image->extension();
-        //     return $request->image->storeAs('public','bitfumes.jpg');
-        //     // return Storage::putFile('public',$request->file('image'));
-        // }else{
-        //     return 'no file selected';
-        // }
-
-        return $request->all();
+        return redirect('mainLayout.test');
     }
 
     public function searchProject(Request $request)

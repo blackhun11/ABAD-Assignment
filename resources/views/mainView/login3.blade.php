@@ -44,7 +44,7 @@ z-index: 999999">
                 <div class="col-lg-8 push-lg-2 col-md-10 push-md-1 col-sm-12 login2_border login_section_top">
                     <div class="login_logo login_border_radius1">
                         <h3 class="text-center text-white">
-                            <img src="{{asset('assets/img/logow2.png')}}" alt="logo" class="admire_logo"><br />
+                            {{-- <img src="{{asset('assets/img/logow2.png')}}" alt="logo" class="admire_logo"><br /> --}}
                             <span class="m-t-15">LOG IN</span>
                         </h3>
                     </div>

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Redirector;
 use App\Project;
-
+use Auth;
 class HomeController extends Controller
 {
     /**
@@ -13,11 +13,6 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
     /**
      * Show the application dashboard.
      *
@@ -25,8 +20,10 @@ class HomeController extends Controller
      */
     public function index()
     {
+
         $viewRecommended = 1;
         $recommendedProject = Project::getProject($viewRecommended);
         return view('mainView.newHome', compact('recommendedProject'));
     }
+
 }

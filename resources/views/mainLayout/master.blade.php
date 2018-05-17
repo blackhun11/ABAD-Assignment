@@ -28,6 +28,9 @@
   <link type="text/css" rel="stylesheet" href="{{asset('vendors/fileinput/css/fileinput.min.css')}}"/>
   <link type="text/css" rel="stylesheet" href="{{asset('css/pages/form_elements.css')}}"/>
   <link type="text/css" rel="stylesheet" href="{{asset('css/pages/radio_checkbox.css')}}" />
+  <link type="text/css" rel="stylesheet" href="{{asset('vendors/sweetalert/css/sweetalert2.min.css')}}"/>
+  <link type="text/css" rel="stylesheet" href="{{asset('css/pages/sweet_alert.css')}}"/>
+
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
@@ -51,6 +54,13 @@
   .content-wrapper{
     margin:0;
   }
+
+    /* .content{
+    background-color: whitesmoke;
+  } */
+    /* .rec{
+      color:whitesmoke;
+    } */
 </style>
 
 <body class="hold-transition skin-blue fixed sidebar-mini">
@@ -190,7 +200,7 @@
 
   {{-- <script src="{{asset('js/jquery.min.js')}}"></script> --}}
 
-<script type="text/javascript" src="{{asset('js/components.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/components.js')}}" ></script>
 <script type="text/javascript" src="{{asset('js/custom.js')}}"></script> 
 <script type="text/javascript" src="{{asset('assets/js/components.js')}}"></script>
 <script type="text/javascript" src="{{asset('assets/js/custom.js')}}"></script>
@@ -198,8 +208,7 @@
 <script type="text/javascript" src="{{asset('assets/js/pages/icons.js')}}"></script>
 <script type="text/javascript" src="{{asset('assets/vendors/swiper/js/swiper.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('assets/vendors/slimscroll/js/jquery.slimscroll.min.js')}}"></script>
-{{-- <script type="text/javascript" src="{{asset('assets/vendors/countUp.js/js/countUp.min.js')}}"></script> --}}
-{{-- <script type="text/javascript" src="{{asset('assets/js/pages/widget2.js')}}"></script> --}}
+
 <script type="text/javascript" src="{{asset('assets/vendors/circliful/js/jquery.circliful.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('assets/vendors/bootstrapvalidator/js/bootstrapValidator.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('assets/vendors/bootstrap-switch/js/bootstrap-switch.min.js')}}"></script>
@@ -223,6 +232,9 @@
 <script type="text/javascript" src="{{asset('vendors/fileinput/js/fileinput.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('vendors/fileinput/js/theme.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/pages/form_elements.js')}}"></script>
+
+<script type="text/javascript" src="{{asset('vendors/sweetalert/js/sweetalert2.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/pages/sweet_alerts.js')}}"></script>
 
 {{--  --}}
 

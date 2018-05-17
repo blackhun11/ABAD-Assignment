@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProjectListsTable extends Migration
+class ProjectProgress extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,11 @@ class CreateProjectListsTable extends Migration
      */
     public function up()
     {
-        Schema::create('project_lists', function (Blueprint $table) {
-            $table->increments('id');
+        Schema::create('projectProgress', function (Blueprint $table) {
+            $table->increments('projectProgressID');
+            $table->string('projectID');
+            $table->string('status',4000)->nullable();
+            $table->string('progressDesc',4000)->nullable();
             $table->timestamps();
         });
     }
@@ -26,6 +29,7 @@ class CreateProjectListsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('project_lists');
+        Schema::dropIfExists('projectProgress');
+        
     }
 }

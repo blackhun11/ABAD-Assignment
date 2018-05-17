@@ -2,6 +2,14 @@
 
 @section('content')
 
+<style>
+  .item{
+    width:100%; 
+    height : 160px; 
+    object-fit:cover;
+  }
+</style>
+
 <div class="bg-warning m-t-35 header_align" style="background-color:#3399FF; margin:-15px; padding:21px;">
   <div class="row">
       <div class="col-lg-12 col-12">
@@ -20,14 +28,11 @@
   </div>
 
   <div style="display:flex; justify-content:center;">
-      <span class="button-wrap" style="border-radius:0; padding:2px;">
       @guest
-          <a href="{{ route('login') }}" class="button button-pill button-primary" style="border-radius:0">I want to hire</a>   
+          <a href="{{ route('login') }}" class="button button-pill button-primary button-keren">I want to hire</a>   
       @else
-          <a href="createProject" class="button button-pill button-primary" style="border-radius:0">I want to hire</a>
+          <a href="createProject" class="button button-pill button-primary button-keren">I want to hire</a>
       @endguest
-      
-      </span>
   </div>
 </div>
 
@@ -42,15 +47,15 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-        <img src="../../dist/img/user2-160x160.jpg" alt="Los Angeles" style="width:100%; max-height : 160px">
+        <img src="../../dist/img/user2-160x160.jpg" alt="Los Angeles">
       </div>
 
       <div class="item">
-        <img src="../../dist/img/user2-160x160.jpg" alt="Chicago" style="width:100%; max-height : 160px">
+        <img src="../../dist/img/user2-160x160.jpg" alt="Chicago">
       </div>
     
       <div class="item">
-        <img src="../../dist/img/user2-160x160.jpg" alt="New york" style="width:100%; max-height : 160px">
+        <img src="../../dist/img/user2-160x160.jpg" alt="New york">
       </div>
     </div>
 
@@ -65,15 +70,27 @@
     </a>
   </div>
 
-  <div style="display:flex; margin-top:20px; justify-content:space-between;">
-    <label>Recommended for you</label>
+  @guest
+  <div style="text-align:center; margin:10px;">
+      <a href="{{ url('projectList') }}">
+    <button class="btn btn-primary" >Explore
+      
+      
+      </button>
+    </a>
+    </div>
+  
+  @else
+    <div style="display:flex; margin-top:20px; justify-content:space-between;">
+    <label class = "rec">Recommended for you</label>
         <label>
-        <a href="projectList/2">View All</a>
+        <a href="{{ url('projectList') }}/2">View All</a>
       </label>    
   </div>
-  <script src="{{asset('js/jquery.min.js')}}"></script>
-
+   <script src="{{asset('js/jquery.min.js')}}"></script>
   @include('mainLayout.imageCard')
+ 
 
+  @endguest
   </div>
   @endsection

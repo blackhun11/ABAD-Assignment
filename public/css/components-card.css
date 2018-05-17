@@ -14,7 +14,8 @@ vertical-align: middle; }
 
 .img-fluid {
   width: 100%;
-  max-height: 150px; }
+  min-height: 160px;
+  object-fit: cover; }
 
 .img-thumbnail {
   padding: 0.25rem;

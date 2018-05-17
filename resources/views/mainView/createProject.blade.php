@@ -105,7 +105,7 @@
 
             <div class="form-group">
                 <label>Description</label>
-                    <textarea id="autosize" class="form-control" cols="50" rows="5" maxlength="4000"></textarea>
+                    <textarea id="autosize" class="form-control" cols="50" rows="5" maxlength="4000" name = "projectDesc"></textarea>
             </div>
 
         </div>
